@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+<style>
+    html{
+        padding: 50px;
+    }
+</style>
+    <title>Login Register</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-sm-offset-3">
+                <h2>Login</h2>
+                {{#if message.length}}
+                    <div class="alert alert-danger">{{ message }}</div>
+                {{/if}}
+
+                <form action="/signup" method="post">
+                    <div class="form-group">
+                        <label for="">Email</label>
+                        <input type="text" name="email" id="email" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Passowrd</label>
+                        <input type="text" name="password" id="password" class="form-control">
+                    </div>
+                    <button type="submit" class="btn btn-success btn-lg">Register</button>
+                </form>
+
+                <hr>
+                <p>Need and Account <a href="/signup">Register</a></p>
+                <p>Go back <a href="/">Home</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

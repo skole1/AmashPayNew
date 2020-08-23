@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+<style>
+    html{
+        padding: 50px;
+    }
+</style>
+    <title>Login Register</title>
+</head>
+<body>
+    <div class="container">
+        <div class="page-header text-center">
+            <h1>My Profile</h1>
+            <a href="/logout" class="btn btn-danger btn-sm">Logout</a>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card-body">
+                    <h3><span class="fa fa-user">Welcome {{ user.email }}</span></h3>
+                    <p><strong>Id</strong> {{ user.id }} <br>
+                    <strong>Email</strong> {{ user.email }} <br>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
